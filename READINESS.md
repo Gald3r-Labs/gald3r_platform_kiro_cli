@@ -36,6 +36,16 @@ Platform-native strengths gald3r can lean on, and which need wiring:
 | Agent output side channels (`$AGENT_DISPLAY_OUT` / `$AGENT_CONTEXT_OUT`, v2.3) | ⚙️ needs customization | Lets gald3r hooks stream into display vs. agent context separately |
 | Interactive authoring (`/agent create`, `/guide`) | ✅ present | AI-assisted scaffolding of agents, prompts, and steering into `.kiro/` |
 
+## gald3r Engine — readiness lift (Python core)  <!-- gald3r-engine-pass -->
+
+gald3r now ships a bundled **engine** at `.gald3r_sys/engine/` — a pure-Python Mode-A core (no LLM calls, run via `uv`). It moves the deterministic half of C.R.A.S.H. off this platform's native mechanisms into one cross-platform core the host *calls*: task / bug / feature / PRD / idea / release / vault CRUD, the constraint + freeze gates, and the centralized judgment prompts.
+
+**Integration tier here: MCP (Level 2).** This platform speaks MCP natively, so the engine's 37 `gald3r_*` tools connect directly (`uv run --project .gald3r_sys/engine gald3r mcp`). Here every C.R.A.S.H. layer is already native, so the engine's role is consolidation rather than rescue — one tested core instead of N format-adapted copies, and identical behavior the day this platform changes its conventions.
+
+**Self-contained floor:** every slimmed skill keeps its `SKILL.full.md` fallback, so even with no engine provisioned this platform never drops below the native readiness above.
+
+Net: the engine pulls the *effective* readiness of the deterministic half up toward Full, independent of how much of C.R.A.S.H. this host implements natively — which is precisely the bridge to the section that follows.
+
 ## The ceiling, and what's beyond it
 
 gald3r runs at full strength on this platform — commands, rules, agents, skills, and hooks all map onto native mechanisms, so the framework installs without compromise. As third-party adaptation goes, this is the high end: nothing here has to be approximated.
