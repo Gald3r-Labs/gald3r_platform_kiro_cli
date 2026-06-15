@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="logo/Gald3r_Logo_Big.jpg" alt="Gald3r" width="400" />
 </p>
 
@@ -15,6 +15,9 @@
   <a href="CHANGELOG.md">Changelog</a>
 </p>
 
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/status-alpha-orange" alt="status: alpha" /></a>
+</p>
 ---
 
 ## What is gald3r?
